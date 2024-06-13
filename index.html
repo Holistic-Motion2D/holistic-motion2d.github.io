@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.cdnfonts.com/css/caveat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Handlee&v1" rel="stylesheet">
+
+<style>
+    @import url('https://fonts.cdnfonts.com/css/caveat');
+</style>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Holistic-Motion2D</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><img src="static/images/favicon.ico"
+              style="height:5%; width:5%">Holistic-Motion2D: Scalable Whole-body Human Motion Generation in 2D Space</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://github.com/wangyuan123ac" target="_blank">Yuan Wang</a><sup>1,5,6</sup><sup>*</sup>,
+              </span>
+                <span class="author-block">
+                  <a href="https://kyfafyd.wang" target="_blank">Zhao Wang</a><sup>2</sup><sup>*</sup>,
+                </span>
+                  <span class="author-block">
+                    <a href="https://b1ueorange.github.io/jhgong.github.io" target="_blank">Junhao Gong</a><sup>3</sup><sup>*</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://dihuang.me" target="_blank">Di Huang</a><sup>4,5</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://tonghe90.github.io" target="_blank">Tong He</a><sup>5</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://wlouyang.github.io" target="_blank">Wanli Ouyang</a><sup>5</sup>,
+                  </span>
+                  <span class="author-block">
+                    Jile Jiao<sup>1,6</sup>,
+                  </span>
+                  <span class="author-block">
+                    Xuetao Feng<sup>1,6</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://www.cse.cuhk.edu.hk/~qdou" target="_blank">Qi Dou</a><sup>2</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com.tw/citations?user=TJ4ihdkAAAAJ" target="_blank">Shixiang Tang</a><sup>2</sup><sup>†</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://www.danxurgb.net" target="_blank">Dan Xu</a><sup>7</sup>
+                  </span>
+                  </div>
+
+                  <br>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>Tsinghua University</span>&nbsp;
+                    <span class="author-block"><sup>2</sup>The Chinese University of Hong Kong</span>&nbsp;
+                    <span class="author-block"><sup>3</sup>Shandong University</span>&nbsp;
+                    <span class="author-block"><sup>4</sup>The University of Sydney </span>&nbsp;
+                    <span class="author-block"><sup>5</sup>Shanghai AI Labortary</span>&nbsp;
+                    <span class="author-block"><sup>6</sup>Alibaba Group</span>&nbsp;
+                    <span class="author-block"><sup>7</sup>HKUST</span>
+
+                    <br><br>
+
+                    <span class="author-block"><sup>*</sup>Equal contribution.</span>
+                    <span class="author-block"><sup>†</sup>Corresponding author.</span>
+
+                  </div>
+
+
+                  
+                  <br>
+
+
+              
+
+
+          
+
+
+                    
+
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <!-- <span class="link-block">
+                        <a href='./TokenFlow_Arxiv.pdf' target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span> -->
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="sm/supp.html" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  
+              <!-- Hugging Face Demo link with an image icon -->
+              <!-- <span class="link-block">
+                <a href="https://huggingface.co/spaces/weizmannscience/tokenflow" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img src="static/images/hf.png" alt="Hugging Face Demo">
+                  </span>
+                  <span>Demo</span>
+                </a>
+              </span> -->
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/TBA" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Github link -->
+              <span class="link-block">
+                <a href="https://github.com/TBA" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+              </a>
+            </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Teaser video-->
+<!-- <section class="hero teaser is-light" align="center">
+  <div class="container is-max-desktop">
+    <br>
+    <h2 class="title is-3">Overview of Generated Motions and Downstream Applications</h2>
+    
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="videos/demo.mp4"
+        type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section> -->
+<!-- End teaser video -->
+
+
+
+
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+
+      
+
+      <div id="results-carousel" class="carousel results-carousel" align="center">
+
+        <div class="item item-video1">
+
+
+          <img src="videos/results/cat_dog_1/cat.jpg" alt="MY ALT TEXT" width="222px"/>
+          <img src="videos/results/cat_dog_1/dog.jpg" alt="MY ALT TEXT" width="222px"/>
+
+          &nbsp;&nbsp;&nbsp;&nbsp;
+
+          <video preload="auto" poster="" id="video11" autoplay controls muted loop width="400px">
+            <source src="videos/results/cat_dog_1/highres.mp4"
+            type="video/mp4">
+          </video>
+
+          <p align="center" style="font-family:Bradley Hand">a <font color="#548235">cat*</font> and a <font color="#C00000">dog*</font> walking in the Times Square</p><br>
+
+          
+        </div>
+        
+        <div class="item item-video2">
+          
+          <img src="videos/results/anime_guitar/anime.jpg" alt="MY ALT TEXT" width="222px"/>
+          <img src="videos/results/anime_guitar/guitar.png" alt="MY ALT TEXT" width="222px"/>
+
+          &nbsp;&nbsp;&nbsp;&nbsp;
+
+          <video preload="auto" poster="" id="video11" autoplay controls muted loop width="400px">
+            <source src="videos/results/anime_guitar/highres.mp4"
+            type="video/mp4">
+          </video>
+
+          <h3 align="center" style="font-family:Bradley Hand">an <font color="#548235">anime character*</font> playing a <font color="#C00000">guitar*</font> in front of Tower Bridge</h3><br>
+
+          
+        </div>
+
+        <div class="item item-video3">
+          
+
+          <img src="videos/results/bear_bike/bear.jpg" alt="MY ALT TEXT" width="222px"/>
+          <img src="videos/results/bear_bike/bike.jpg" alt="MY ALT TEXT" width="222px"/>
+
+          &nbsp;&nbsp;&nbsp;&nbsp;
+
+          <video preload="auto" poster="" id="video11" autoplay controls muted loop width="400px">
+            <source src="videos/results/bear_bike/highres.mp4"
+            type="video/mp4">
+          </video>
+
+          <h3 align="center" style="font-family:Bradley Hand">a <font color="#548235">toy bear*</font> riding a <font color="#C00000">bike*</font> on the beach</h3><br>
+          
+        </div>
+
+        <div class="item item-video4">
+          
+
+          <img src="videos/results/woodenpot_flower/woodenpot.jpg" alt="MY ALT TEXT" width="222px"/>
+          <img src="videos/results/woodenpot_flower/flower.jpg" alt="MY ALT TEXT" width="222px"/>
+
+          &nbsp;&nbsp;&nbsp;&nbsp;
+
+          <video preload="auto" poster="" id="video11" autoplay controls muted loop width="400px">
+            <source src="videos/results/woodenpot_flower/highres.mp4"
+            type="video/mp4">
+          </video>
+
+          <h3 align="center" style="font-family:Bradley Hand">a front view of a <font color="#548235">woodenpot*</font> with a <font color="#C00000">flower*</font> in it on beach with a view of seashore</h3><br>
+          
+        </div>
+
+
+        
+        
+        
+
+
+      </div>
+      <p>Customized text-to-video generation results of our proposed CustomVideo with given multiple subjects (left) and text prompts (below). Our approach can disentangle highly similar subjects, \eg, \emph{cat} v.s. \emph{dog}, simultaneously preserving the fidelity of subjects and smooth motions.</p>
+    </div>
+  </div>
+</section> -->
+
+
+
+
+
+<br>
+<!-- Teaser video-->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video preload="auto"poster="" id="tree" autoplay controls muted loop width="600px" outline="0px"> 
+        <source src="final_very_compressed.mp4"
+        type="video/mp4">
+      </video>
+    </div>
+  </div> 
+</section> -->
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this paper, we introduce a novel path to <i>general</i> human motion generation by focusing on 2D space. Traditional methods have primarily generated human motions in 3D, which, while detailed and realistic, are often limited by the scope of available 3D motion data in terms of both the size and the diversity. To address these limitations, we exploit extensive availability of 2D motion data. We present <b>Holistic-Motion2D</b>, the first comprehensive and large-scale benchmark for 2D whole-body motion generation, which includes over 1M in-the-wild motion sequences, each paired with high-quality whole-body/partial pose annotations and textual descriptions. Notably, Holistic-Motion2D is ten times larger than the previously largest 3D motion dataset. We also introduce a baseline method, featuring innovative <i>whole-body part-aware attention</i> and <i>confidence-aware modeling</i> techniques, tailored for 2D <u>T</u>ext-driv<u>EN</u> whole-bo<u>D</u>y motion gen<u>ER</u>ation, namely <b>Tender</b>. Extensive experiments demonstrate the effectiveness of <b>Holistic-Motion2D</b> and <b>Tender</b> in generating expressive, diverse, and realistic human motions. We also highlight the utility of 2D motion for various downstream applications and its potential for lifting to 3D motion.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Paper poster -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-">
+          <h2 class="title is-3">Dataset</h2>
+          <div class="content has-text-justified">
+
+           
+
+        <div>
+          <td colspan="3"><img src="images/dataset_comparison.png" alt="" width="1000" /></td>
+        </div>
+      <p>Comparison between our proposed Holistic-Motion2D and existing text-motion datasets. The video quantity of our Holistic-Motion2D is <b>10x</b> larger than the previously largest 3D motion dataset, <i>i.e.</i>, Motion-X.</p>
+
+        <br>
+
+      <div>
+        <td colspan="3"><img src="images/pipeline.png" alt="" width="1000" /></td>
+      </div>
+      <p>Overview of the keypoints and pose descriptions annotation pipeline of 2D whole-body motions.</p>
+      </div>
+      </div>
+  </section>
+<!--End paper poster -->
+
+
+<!-- Paper poster -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified">
+
+        <div>
+          <td colspan="3"><img src="images/framework.png" alt="" width="1000" /></td>
+        </div>
+      <p><b>Overview of our Tender framework</b>. (a) PA-VAE to embed whole-body part-aware spatio-temporal features into a latent space. (b) The diffusion model to generate realistic whole-body motions conditioned on texts. (c) Whole-body Part-Aware Attention to model spatial relations of different parts with CAG mechanism.</p>
+      </div>
+      </div>
+  </section>
+<!--End paper poster -->
+
+
+
+
+
+
+
+<!-- Video grid -->
+<!-- <section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">TokenFlow Editing results</h2>
+          <div class="content has-text-justified">
+            <td colspan="3">
+              <p style="margin-top: -12px;">
+                Hover over the videos to see the original video and text prompts.
+              </p>
+            </td>
+    <div class="video-wrapper" style="width: 32%">
+      <video preload="auto"class="hover-video" src="videos/results/bread/input_fps20.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="videos/results/bread/result_fps_20.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">an ice sculpture</div>
+    </div>
+    <div class="video-wrapper" style="width: 32%">
+      <video preload="auto"class="hover-video" src="videos/results/wolf-part/input_fps20.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="videos/results/wolf-part/result_fps_20.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">a robotic wolf</div>
+    </div>
+    <div class="video-wrapper" style="width: 32%">
+      <video preload="auto"class="hover-video" src="videos/results/woman-running/input_fps30.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="videos/results/woman-running/marble.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">a marble sculpture</div>
+    </div>
+    <br />
+    <div class="video-grid">
+      <div class="video-wrapper">
+        <video preload="auto"class="hover-video" src="videos/results/poodle_2/input_fps30.mp4" preload="metadata" autoplay loop muted> </video>
+        <video preload="auto"class="default-video" src="videos/results/poodle_2/result_fps_30.mp4" preload="metadata" autoplay controls loop muted></video>
+        <div class="overlay-text">Van Gogh painting</div>
+      </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="default-video" src="videos/results/stork/origami.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="hover-video" src="videos/results/stork/input_fps30.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">an origami of a stork</div>
+    </div>
+    <br />
+    <div class="video-wrapper">
+      <video preload="auto"class="default-video" src="videos/results/tesla/result_fps_30.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="hover-video" src="videos/results/tesla/input_fps30.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">a car made of ice on an icy road</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="videos/results/gen1-face/input_fps30.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="videos/results/gen1-face/result_fps30.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">Van Gogh painting</div>
+    </div>
+    <br/>
+    <div class="video-wrapper">
+      <video preload="auto"class="default-video" src="videos/results/man_basket/result_fps_30.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="hover-video" src="videos/results/man_basket/input_fps30.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">a robot spinning a silver ball</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="videos/results/kittens/input_fps30.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="videos/results/kittens/result_fps_30.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">colorful crochet kittens</div>
+    </div>
+    <br/>
+  </div>
+  
+</section> -->
+<!-- End video preload="auto"grid -->
+
+
+
+
+
+
+<!-- video preload="auto"carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <!-- <div class="container is-max-desktop"> -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column custom-width">
+          <h2 class="title is-3">Comparison with State-of-the-arts</h2>
+          <div class="content has-text-justified" align="center">
+
+            
+            
+
+
+            <div id="results-carousel" class="carousel results-carousel" align="center">
+              <div class="item item-video1">
+      
+      
+                <div class="caption-container" style="width: 950px; padding-left: 0px">
+                  <div class="caption">
+                    <p><b>Tender</b></p>
+                  </div>
+                  <div class="caption">
+                    <p>&nbsp;&nbsp;&nbsp;<b>T2M-GPT</b><a href="#tsmgpt">[1]</a></p>
+                  </div>
+                  <div class="caption">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>MDM</b><a href="#mdm">[2]</a></p>
+                  </div>
+                  <div class="caption">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>MLD</b><a href="#mld">[3]</a></p>
+                  </div>
+                </div>
+                
+      
+                 <!-- Add caption element for each video preload="auto"-->
+                 <video preload="auto"poster="" id="video11" autoplay controls muted loop width="300px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="videos/compare/1/tender.mp4"
+                  type="video/mp4">
+                </video>
+                <video preload="auto"poster="" id="video12" autoplay controls muted loop width="300px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="videos/compare/1/t2mgpt.mp4"
+                  type="video/mp4">
+                </video>
+                <video preload="auto"poster="" id="video13" autoplay controls muted loop width="300px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="videos/compare/1/mdm.mp4"
+                  type="video/mp4">
+                </video>
+                <video preload="auto"poster="" id="video14" autoplay controls muted loop width="300px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="videos/compare/1/mld.mp4"
+                  type="video/mp4">
+                </video>
+      
+                <p align="center" style="font-family:Bradley Hand">A woman is doing squats with dumbbells in a gym.</p><br>
+                
+                
+              </div>
+              
+      
+              
+              <div class="item item-video2">
+      
+      
+                <div class="caption-container" style="width: 950px; padding-left: 0px">
+                  <div class="caption">
+                    <p><b>Tender</b></p>
+                  </div>
+                  <div class="caption">
+                    <p>&nbsp;&nbsp;&nbsp;<b>T2M-GPT</b><a href="#tsmgpt">[1]</a></p>
+                  </div>
+                  <div class="caption">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>MDM</b><a href="#mdm">[2]</a></p>
+                  </div>
+                  <div class="caption">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>MLD</b><a href="#mld">[3]</a></p>
+                  </div>
+                </div>
+                
+      
+                 <!-- Add caption element for each video preload="auto"-->
+                 <video preload="auto"poster="" id="video11" autoplay controls muted loop width="300px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="videos/compare/2/tender.mp4"
+                  type="video/mp4">
+                </video>
+                <video preload="auto"poster="" id="video12" autoplay controls muted loop width="300px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="videos/compare/2/t2mgpt.mp4"
+                  type="video/mp4">
+                </video>
+                <video preload="auto"poster="" id="video13" autoplay controls muted loop width="300px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="videos/compare/2/mdm.mp4"
+                  type="video/mp4">
+                </video>
+                <video preload="auto"poster="" id="video14" autoplay controls muted loop width="300px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="videos/compare/2/mld.mp4"
+                  type="video/mp4">
+                </video>
+      
+                <p align="center" style="font-family:Bradley Hand">This man was performing ball-throwing acrobatics.</p><br>
+                
+                
+              </div>
+
+            
+        
+
+
+        
+
+        </div>
+        
+        <p align="center"><b>Qualitative results of our Tender compared with previous SOTA methods.</b> Our <b>Tender</b> generates clearly more vivid human motions <br>and preserves the fidelity, together with superior temporal consistency.</p>
+
+      </div>
+      
+    </div>
+    </div>
+  </div>
+</section>
+<!-- End video preload="auto"carousel -->
+
+
+
+<!-- Video carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      
+    <!-- <div class="container is-max-desktop">
+      
+    <div class="container"> -->
+      <!-- <div class="content has-text-justified" align="center"> -->
+      <h2  align="center" class="title is-3">Application 1: Pose-guided Human Video Generation</h2>
+
+      <div class="caption-container" style="width: 850px; padding-left: 100px">
+        <div class="caption">
+          <p><b>Reference Image</b></p>
+        </div>
+        <div class="caption">
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>DensePose (mapped from 2D keypoints)</b></p>
+        </div>
+        <div class="caption">
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Generated Video</b></p>
+        </div>
+      </div>
+
+      <div id="results-carousel" class="carousel results-carousel" align="center">
+        <!-- <div class="content has-text-justified" align="center"> -->
+
+
+          
+
+
+
+          <div class="item item-video1">
+  
+            <video preload="auto" poster="" id="video11" autoplay controls muted loop width="1000px">
+              <source src="videos/downstream/human/anyone-10_K400_0s73fjHokag/grid.mp4"
+              type="video/mp4">
+            </video>
+            <p align="center" style="font-family:Bradley Hand">The man in the middle is doing a dance move.</p><br>
+
+          </div>
+
+          <div class="item item-video2">
+
+            <video preload="auto" poster="" id="video11" autoplay controls muted loop width="1000px">
+              <source src="videos/downstream/human/anyone-11_K700_dq8df2Lbj_c_000037_000047/grid.mp4"
+              type="video/mp4">
+            </video>
+            <p align="center" style="font-family:Bradley Hand">A man is performing a series of exercises with dumbbells.</p><br>
+
+            
+          </div>
+
+          <div class="item item-video3">
+
+            <video preload="auto" poster="" id="video11" autoplay controls muted loop width="1000px">
+              <source src="videos/downstream/human/anyone-12_K700_RHK30i-kcqQ_000061_000071/grid.mp4"
+              type="video/mp4">
+            </video>
+            <p align="center" style="font-family:Bradley Hand">A woman is lifting a barbell and then dropping it with both hands.</p><br>
+            
+          </div>
+
+          <div class="item item-video4">
+
+            <video preload="auto" poster="" id="video11" autoplay controls muted loop width="1000px">
+              <source src="videos/downstream/human/anyone-13_K700_g6bIb-odH3M_000005_000015/grid.mp4"
+              type="video/mp4">
+            </video>
+            <p align="center" style="font-family:Bradley Hand">A woman is doing squats with dumbbells in a gym.</p><br>
+            
+          </div>
+        
+
+
+</div>
+
+        <p align="center">Visualization results of pose-guided human video generation using our proposed <b>Tender</b> model in multiple visual scenarios, <br>with a corresponding text prompt given below and a reference image given on the left.</p>
+
+      <!-- </div> -->
+    </div>
+  </div>
+  </div>
+  </div>
+</section>
+
+
+
+<!-- Video carousel -->
+
+
+
+
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2  align="center" class="title is-3">Application 2: 2D-to-3D Motion Lifting</h2>
+
+      <div class="caption-container" style="width: 750px; padding-left: 200px">
+        <div class="caption">
+          <p><b>2D Human Motion</b></p>
+        </div>
+        <div class="caption">
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Lifted 3D Human Motion</b></p>
+        </div>
+      </div>
+
+
+      <div id="results-carousel" class="carousel results-carousel" align="center">
+        
+        
+          <div class="item item-video1">
+  
+            <video preload="auto" poster="" id="video333" autoplay controls muted loop width="800px">
+              <source src="videos/downstream/lifting/results_InternVid_DUNOO1iRE_w_00_03_09.656_00_03_14.628.mp4"
+              type="video/mp4">
+            </video>
+            <p align="center" style="font-family:Bradley Hand">A man is lifting weights while standing on a weight bench in the gym.</p><br>
+            
+          </div>
+
+          <div class="item item-video2">
+
+            <video preload="auto" poster="" id="video444" autoplay controls muted loop width="800px">
+              <source src="videos/downstream/lifting/results_K400_0fjsXnccCu0.mp4"
+              type="video/mp4">
+            </video>
+            <p align="center" style="font-family:Bradley Hand">A man is lifting a barbell and performing a series of exercises.</p><br>
+
+          </div>
+
+          <div class="item item-video3">
+
+            <video preload="auto" poster="" id="video555" autoplay controls muted loop width="800px">
+              <source src="videos/downstream/lifting/results_K400_kRv3B6AWoX8.mp4"
+              type="video/mp4">
+            </video>
+            <p align="center" style="font-family:Bradley Hand">A woman is doing squats with dumbbells in a gym.</p><br>
+            
+          </div>
+
+          <div class="item item-video4">
+
+            <video preload="auto" poster="" id="video666" autoplay controls muted loop width="800px">
+              <source src="videos/downstream/lifting/results_K700_g6bIb-odH3M_000005_000015.mp4"
+              type="video/mp4">
+            </video>
+            <p align="center" style="font-family:Bradley Hand">A man is juggling three balls.</p><br>
+            
+          </div>
+
+          <div class="item item-video5">
+
+            <video preload="auto" poster="" id="video777" autoplay controls muted loop width="800px">
+              <source src="videos/downstream/lifting/results_K700_l7ICw6Qe_F0_000006_000016.mp4"
+              type="video/mp4">
+            </video>
+            <p align="center" style="font-family:Bradley Hand">A man is doing a workout with dumbbells.</p><br>
+            
+          </div>
+
+          <div class="item item-video6">
+
+            <video preload="auto" poster="" id="video888" autoplay controls muted loop width="800px">
+              <source src="videos/downstream/lifting/results_K700_Cdu19VuWZOc_000008_000018.mp4"
+              type="video/mp4">
+            </video>
+            <p align="center" style="font-family:Bradley Hand">A man is performing exercises in a gym by lying on his back and rolling over to his stomach.</p><br>
+            
+          </div>
+
+
+        </div>
+
+        <p align="center">Visualization results of 3D motion lifting using our proposed <b>Tender</b> model in multiple visual scenarios, <br>with a corresponding text prompt given below.</p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      
+    <div class="container">
+      
+      <h2  align="center" class="title is-3">More Generated 2D Human Motions</h2>
+      <div id="results-carousel" class="carousel results-carousel" align="center">
+        <!-- <div class="content has-text-justified" align="center"> -->
+
+
+
+          
+
+          <div class="item item-video1">
+  
+            <video preload="auto" poster="" id="video111111" autoplay controls muted loop width="300px">
+              <source src="videos/2dmotion/K400_FTIshljnb5c.mp4"
+              type="video/mp4">
+            </video>
+            <p align="center" style="font-family:Bradley Hand">The man is playing the piano with his hands.</p><br>
+
+          </div>
+
+          <div class="item item-video2">
+  
+            <video preload="auto" poster="" id="video333" autoplay controls muted loop width="300px">
+              <source src="videos/2dmotion/K400_HF4CAhZhY7g.mp4"
+              type="video/mp4">
+            </video>
+            <p align="center" style="font-family:Bradley Hand">A man is lifting weights in a gym. He is lifting the weights with both hands in a slow and steady motion.</p><br>
+
+          </div>
+
+          <div class="item item-video1">
+  
+            <video preload="auto" poster="" id="video111111" autoplay controls muted loop width="300px">
+              <source src="videos/2dmotion/K400_4jYp88KLulk.mp4"
+              type="video/mp4">
+            </video>
+            <p align="center" style="font-family:Bradley Hand">The elderly man swinging a golf club in different directions and positions. The man is practicing his swing.</p><br>
+
+          </div>
+
+
+          <div class="item item-video1">
+  
+            <video preload="auto" poster="" id="video111111" autoplay controls muted loop width="300px">
+              <source src="videos/2dmotion/K400_VR-qzAn3Oxg.mp4"
+              type="video/mp4">
+            </video>
+            <p align="center" style="font-family:Bradley Hand">The man is performing a martial art routine. He is doing a series of punches and kicks and postures.</p><br>
+
+          </div>
+
+        </div>
+
+        <p align="center">Visualization results of he generated 2D whole-body motions using our proposed <b>Tender</b> model in multiple visual scenarios, <br>with a corresponding text prompt given below.</p>
+
+
+
+
+
+
+
+
+        <!-- <p align="center">Generated videos from our CustomVideo with two subjects.</p> -->
+
+      <!-- </div> -->
+    </div>
+  </div>
+  </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column custom-width">
+          <h2 class="title is-3">References</h2>
+          <div class="content has-text-justified">
+  <p>
+    <a name="t2mgpt" id="t2mgpt"></a>
+    [1] Jianrong Zhang, Yangsong Zhang, Xiaodong Cun, Shaoli Huang, Yong Zhang, Hongwei Zhao, Hongtao Lu, and Xi Shen. T2m-gpt: Generating human motion from textual descriptions with discrete representations. CVPR, 2023.
+  </p>
+  <p>
+    <a name="mdm" id="mdm"></a>
+    [2] Guy Tevet, Sigal Raab, Brian Gordon, Yonatan Shafir, Daniel Cohen-Or, and Amit H Bermano. Human motion diffusion model. ICLR, 2023.
+  </p>
+  <p>
+    <a name="mld" id="mld"></a>
+    [3] Xin Chen, Biao Jiang, Wen Liu, Zilong Huang, Bin Fu, Tao Chen, and Gang Yu. Executing your commands via motion diffusion in latent space. CVPR, 2023.
+  </p>
+  
+  </div>
+        </div>
+      </div>
+    </div>  
+
+  </section>
+
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+@article{wang2024holistic,
+  title={Holistic-Motion2D: Scalable Whole-body Human Motion Generation in 2D Space},
+  author={Wang, Yuan and Wang, Zhao and Gong, Junhao and Huang, Di and He, Tong and Ouyang, Wanli and Jiao, Jile and Feng, Xuetao and Dou, Qi and Tang, Shixiang and Xu, Dan},
+  journal={arXiv preprint arXiv:},
+  year={2024}
+}
+    </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+
+    <!-- <br>
+    <br> -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        const videoWrappers = document.querySelectorAll('.video-wrapper');
+      
+        videoWrappers.forEach(wrapper => {
+          const defaultVideo = wrapper.querySelector('.default-video');
+          const aspectRatio = defaultVideo.videoWidth / defaultVideo.videoHeight;
+          const height = wrapper.offsetWidth / aspectRatio;
+      
+          wrapper.style.height = `${height}px`;
+      
+          wrapper.addEventListener('mouseenter', () => {
+            defaultVideo.pause();
+            hoverVideo.play();
+          });
+      
+          wrapper.addEventListener('mouseleave', () => {
+            defaultVideo.play();
+            hoverVideo.pause();
+          });
+        });
+      }); 
+      $(document).ready(function() {
+        var carouselItems = $('.carousel .item');
+        var numItems = carouselItems.length;
+        var numVideos = 5;
+        var currentIndex = 0;
+    
+        $('.carousel').on('click', function() {
+          currentIndex++;
+          if (currentIndex + numVideos <= numItems) {
+            carouselItems.removeClass('active');
+            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+          } else {
+            currentIndex = 0;
+            carouselItems.removeClass('active');
+            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+          }
+        });
+    
+        carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+      });
+    </script>
+  </body>
+  </html>
